@@ -3,17 +3,26 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "devStart": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "uniqid": "^5.4.0"
   },
   "keywords": [],
-  "description": "",
   "devDependencies": {
     "nodemon": "^2.0.15"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonkHunkle/expressNote.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JonkHunkle/expressNote/issues"
+  },
+  "homepage": "https://github.com/JonkHunkle/expressNote#readme",
+  "description": ""
 }
