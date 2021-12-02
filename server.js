@@ -8,7 +8,7 @@ const PORT = process.env.port || 3001
 
 
 app.use(express.json());
-// app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static('public'))
 
@@ -25,8 +25,8 @@ app.get('/api/notes', (req, res) => {
 
 app.post('/api/notes', (req, res) => {
   let newNote = req.body
-  let newID = uniqid()
-  newNote.id = newID
+  let noteID = uniqid()
+  newNote.id = noteID
   fs.readFile('./db/db.json', (err, data) => {
     if (err)
       throw err;
@@ -38,19 +38,21 @@ app.post('/api/notes', (req, res) => {
       console.log('new note!')
     })
   })
-  res.redirect('/notes')
 })
 
-app.delete('/notes/:id', (req, res) => {
+app.delete('/api/notes/:id', (req, res) => {
+  console.log('delete id', req.params.id)
   let jsonPath = path.join(__dirname, './db/db.json')
   for (let i = 0; i < db.length; i++) {
-    if (db.id === req.params.id) {
+    if (db[i].id === req.params.id) {
       db.splice(i, 1)
       break
     }
   }
-  fs.writeFile(jsonPath, db)
-  res.json(db)
+  fs.writeFile(jsonPath, JSON.parse(db), (err, data) => {
+    if (err) throw err;
+    console.log('deleted! note!')
+  })
 })
 
 
