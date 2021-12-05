@@ -37,8 +37,8 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 
 ## Screenshots
 
-![Index Page](.\public\assets\images\landing.png)
+![Index Page](./public/assets/images/landing.png)
 
-![Notes Page](.\public\assets\images\adding.png)
+![Notes Page](./public/assets/images/adding.png)
 
-![New Note](.\public\assets\images\new.png)
+![New Note](./public/assets/images/new.png)
