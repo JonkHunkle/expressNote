@@ -56,7 +56,7 @@ app.post('/api/notes', (req, res) => {
       parsedDb.unshift(newNote)
       console.log('parsed data?', parsedDb)
 
-      //console.log('new note array string', noteArray)
+
 
       fs.writeFile(jsonFilePath, JSON.stringify(parsedDb), (err) => {
 
@@ -86,7 +86,7 @@ app.delete(`/api/notes/:id`, (req, res) => {
       }
     }
     console.log('new db', dbArray)
-    // res.json(dbArray)
+
     fs.writeFile(jsonPath, JSON.stringify(dbArray), (err, data) => {
       res.json(dbArray)
       if (err) throw err;
