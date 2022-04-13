@@ -2,7 +2,7 @@
 
 ## Description
 
-Take fun notes with persistance! If you get tired of seeing your old notes on the left of the screen, go ahead and delete them! I promise i wont tell!
+Take fun notes with persistence! If you get tired of seeing your old notes on the left of the screen, go ahead and delete them! I promise i wont tell!
 
 ## Technologies Used
 
